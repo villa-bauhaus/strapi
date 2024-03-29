@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_apartmans_apartman_features",
+  "info": {
+    "displayName": "apartman_features",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "icon-enlarge2",
+        "icon-droplet",
+        "icon-spoon-knife"
+      ]
+    },
+    "information": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

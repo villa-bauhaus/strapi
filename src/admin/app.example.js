@@ -1,33 +1,15 @@
 export default {
   config: {
-    locales: [
-      // 'ar',
-      // 'fr',
-      // 'cs',
-      // 'de',
-      // 'dk',
-      // 'es',
-      // 'he',
-      // 'id',
-      // 'it',
-      // 'ja',
-      // 'ko',
-      // 'ms',
-      // 'nl',
-      // 'no',
-      // 'pl',
-      // 'pt-BR',
-      // 'pt',
-      // 'ru',
-      // 'sk',
-      // 'sv',
-      // 'th',
-      // 'tr',
-      // 'uk',
-      // 'vi',
-      // 'zh-Hans',
-      // 'zh',
-    ],
+    translations: {
+      en: {
+        "app.components.LeftMenu.navbrand.title": "Prisma Solutions",
+        "app.components.LeftMenu.navbrand.workplace": "Admin Dashboard",
+        "Auth.form.welcome.title": "Welcome to Prisma Admin",
+        "Auth.form.welcome.subtitle": "Login to your account",
+        "Settings.profile.form.section.experience.interfaceLanguageHelp":
+          "Preference changes will apply only to you.",
+      },
+    },
   },
   bootstrap(app) {
     console.log(app);

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "incoming_contacts",
+  "info": {
+    "singularName": "incoming-contact",
+    "pluralName": "incoming-contacts",
+    "displayName": "IncomingContact"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    }
+  }
+}
