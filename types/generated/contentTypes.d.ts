@@ -823,6 +823,7 @@ export interface ApiApartmanApartman extends Schema.CollectionType {
     singularName: 'apartman';
     pluralName: 'apartmans';
     displayName: 'Apartmans';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -887,6 +888,13 @@ export interface ApiApartmanApartman extends Schema.CollectionType {
       }> &
       Attribute.DefaultTo<0>;
     features: Attribute.Component<'apartmans.apartman-features', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Attribute.UID<'api::apartman.apartman', 'name'> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
