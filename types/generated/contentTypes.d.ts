@@ -943,6 +943,7 @@ export interface ApiBlogCategoryBlogCategory extends Schema.CollectionType {
     singularName: 'blog-category';
     pluralName: 'blog-categories';
     displayName: 'BlogCategory';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -971,7 +972,7 @@ export interface ApiBlogCategoryBlogCategory extends Schema.CollectionType {
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Attribute.DefaultTo<0>;
@@ -1004,6 +1005,7 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     singularName: 'blog-post';
     pluralName: 'blog-posts';
     displayName: 'BlogPost';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1035,13 +1037,13 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     displayImage: Attribute.Media &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     content: Attribute.RichText &
@@ -1092,6 +1094,7 @@ export interface ApiFaqFaq extends Schema.CollectionType {
     singularName: 'faq';
     pluralName: 'faqs';
     displayName: 'Faq';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1119,7 +1122,7 @@ export interface ApiFaqFaq extends Schema.CollectionType {
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Attribute.DefaultTo<0>;
@@ -1144,6 +1147,7 @@ export interface ApiFeatureFeature extends Schema.CollectionType {
     singularName: 'feature';
     pluralName: 'features';
     displayName: 'Feature';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1158,7 +1162,7 @@ export interface ApiFeatureFeature extends Schema.CollectionType {
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     title: Attribute.String &
@@ -1178,7 +1182,7 @@ export interface ApiFeatureFeature extends Schema.CollectionType {
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Attribute.DefaultTo<0>;
@@ -1275,6 +1279,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
     singularName: 'review';
     pluralName: 'reviews';
     displayName: 'Review';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1301,7 +1306,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
     reviewer_name: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     reviewer_type: Attribute.String &
@@ -1313,7 +1318,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
     priority: Attribute.Integer &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Attribute.DateTime;
