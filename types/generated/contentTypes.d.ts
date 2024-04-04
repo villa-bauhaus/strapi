@@ -913,6 +913,13 @@ export interface ApiApartmanApartman extends Schema.CollectionType {
           localized: false;
         };
       }>;
+    featured: Attribute.Boolean &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
