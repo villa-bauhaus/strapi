@@ -12,6 +12,7 @@ module.exports = createCoreController("api::apartman.apartman", ({ strapi }) => 
 
         const entity = await strapi.db.query("api::apartman.apartman").findOne({
             where: { slug: id },
+            populate: ["deep"],
         });
         const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
 
