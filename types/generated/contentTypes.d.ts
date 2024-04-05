@@ -1234,6 +1234,35 @@ export interface ApiFeatureFeature extends Schema.CollectionType {
   };
 }
 
+export interface ApiHomePageGalleryHomePageGallery extends Schema.SingleType {
+  collectionName: 'home_page_galleries';
+  info: {
+    singularName: 'home-page-gallery';
+    pluralName: 'home-page-galleries';
+    displayName: 'homePageGallery';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    images: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page-gallery.home-page-gallery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page-gallery.home-page-gallery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiIncomingContactIncomingContact
   extends Schema.CollectionType {
   collectionName: 'incoming_contacts';
@@ -1393,6 +1422,7 @@ declare module '@strapi/types' {
       'api::blog-post.blog-post': ApiBlogPostBlogPost;
       'api::faq.faq': ApiFaqFaq;
       'api::feature.feature': ApiFeatureFeature;
+      'api::home-page-gallery.home-page-gallery': ApiHomePageGalleryHomePageGallery;
       'api::incoming-contact.incoming-contact': ApiIncomingContactIncomingContact;
       'api::newletter-subscription.newletter-subscription': ApiNewletterSubscriptionNewletterSubscription;
       'api::review.review': ApiReviewReview;
