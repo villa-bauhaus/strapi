@@ -14,10 +14,22 @@ export interface ApartmansApartmanFeatures extends Schema.Component {
   };
 }
 
+export interface ApartmansApartmentEquipment extends Schema.Component {
+  collectionName: 'components_apartmans_apartment_equipments';
+  info: {
+    displayName: 'Apartment_equipment';
+    icon: 'server';
+  };
+  attributes: {
+    equipment: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'apartmans.apartman-features': ApartmansApartmanFeatures;
+      'apartmans.apartment-equipment': ApartmansApartmentEquipment;
     }
   }
 }

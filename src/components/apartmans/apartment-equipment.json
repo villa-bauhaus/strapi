@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_apartmans_apartment_equipments",
+  "info": {
+    "displayName": "Apartment_equipment",
+    "icon": "server"
+  },
+  "options": {},
+  "attributes": {
+    "equipment": {
+      "type": "string"
+    }
+  }
+}
