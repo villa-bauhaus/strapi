@@ -938,6 +938,12 @@ export interface ApiApartmanApartman extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    seo: Attribute.Component<'shared.seo'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1085,6 +1091,12 @@ export interface ApiBlogPostBlogPost extends Schema.CollectionType {
     >;
     slug: Attribute.UID<'api::blog-post.blog-post', 'title'> &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Attribute.Component<'shared.seo'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
