@@ -1118,8 +1118,7 @@ export interface ApiFaqFaq extends Schema.CollectionType {
   info: {
     singularName: 'faq';
     pluralName: 'faqs';
-    displayName: 'Faq';
-    description: '';
+    displayName: 'faq';
   };
   options: {
     draftAndPublish: false;
@@ -1137,7 +1136,6 @@ export interface ApiFaqFaq extends Schema.CollectionType {
         };
       }>;
     answer: Attribute.Text &
-      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1147,7 +1145,7 @@ export interface ApiFaqFaq extends Schema.CollectionType {
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: false;
+          localized: true;
         };
       }> &
       Attribute.DefaultTo<0>;

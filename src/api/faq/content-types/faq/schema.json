@@ -4,8 +4,7 @@
   "info": {
     "singularName": "faq",
     "pluralName": "faqs",
-    "displayName": "Faq",
-    "description": ""
+    "displayName": "faq"
   },
   "options": {
     "draftAndPublish": false
@@ -30,18 +29,17 @@
           "localized": true
         }
       },
-      "type": "text",
-      "required": true
+      "type": "text"
     },
     "priority": {
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
       "type": "integer",
-      "required": true,
-      "default": 0
+      "default": 0,
+      "required": true
     }
   }
 }
