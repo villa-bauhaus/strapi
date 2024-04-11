@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "privacy_policy_pages",
+  "info": {
+    "singularName": "privacy-policy-page",
+    "pluralName": "privacy-policy-pages",
+    "displayName": "PrivacyPolicyPage"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    }
+  }
+}

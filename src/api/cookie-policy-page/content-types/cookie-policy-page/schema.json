@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "cookie_policy_pages",
+  "info": {
+    "singularName": "cookie-policy-page",
+    "pluralName": "cookie-policy-pages",
+    "displayName": "CookiePolicyPage"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    }
+  }
+}
