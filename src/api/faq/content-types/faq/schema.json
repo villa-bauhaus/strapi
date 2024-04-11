@@ -4,10 +4,11 @@
   "info": {
     "singularName": "faq",
     "pluralName": "faqs",
-    "displayName": "faq"
+    "displayName": "faq",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {
     "i18n": {
