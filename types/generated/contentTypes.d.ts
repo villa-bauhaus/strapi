@@ -971,7 +971,7 @@ export interface ApiBlogCategoryBlogCategory extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   pluginOptions: {
     i18n: {
@@ -1003,6 +1003,7 @@ export interface ApiBlogCategoryBlogCategory extends Schema.CollectionType {
       Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::blog-category.blog-category',
       'oneToOne',
@@ -1175,7 +1176,7 @@ export interface ApiFeatureFeature extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   pluginOptions: {
     i18n: {
@@ -1213,6 +1214,7 @@ export interface ApiFeatureFeature extends Schema.CollectionType {
       Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::feature.feature',
       'oneToOne',
@@ -1336,7 +1338,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   pluginOptions: {
     i18n: {
@@ -1377,6 +1379,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
       }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::review.review',
       'oneToOne',
