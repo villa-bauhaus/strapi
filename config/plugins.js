@@ -31,13 +31,13 @@ module.exports = ({ env }) => ({
         },
         requireTLS: true,
         auth: {
-          user: 'no-reply@villabauhaus-siofok.com',
-          pass: 'omoxUgM,2H39',
+          user: 'no-reply@villabauhaus-siofok.hu',
+          pass: ',=bX4g&vjt)y',
         },
       },
       settings: {
-        defaultFrom: "no-reply@villabauhaus-siofok.com",
-        defaultReplyTo: "info@villabauhaus-siofok.com",
+        defaultFrom: "no-reply@villabauhaus-siofok.hu",
+        defaultReplyTo: "info@villabauhaus-siofok.hu",
       },
     },
   },

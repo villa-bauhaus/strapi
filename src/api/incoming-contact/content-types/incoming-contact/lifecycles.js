@@ -5,7 +5,7 @@ module.exports = {
         try{
             await strapi.plugins['email-designer'].services.email.sendTemplatedEmail({
                 to: result.email,
-                from: 'no-reply@villabauhaus-siofok.com',
+                from: 'no-reply@villabauhaus-siofok.hu',
             },
             {
                 templateReferenceId: 1,
@@ -13,8 +13,8 @@ module.exports = {
             })
             await strapi.plugins["email"].services.email.send(
               {
-                to: "info@villabauhaus-siofok.com",
-                from: "no-reply@villabauhaus-siofok.com",
+                to: "info@villabauhaus-siofok.hu",
+                from: "no-reply@villabauhaus-siofok.hu",
                 subject: "Contact Form",
                 html: `<h2>New Contact Form Submission</h2><br>
                 Name: ${result.name}<br>
