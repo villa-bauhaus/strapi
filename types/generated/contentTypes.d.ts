@@ -1336,6 +1336,7 @@ export interface ApiIncomingContactIncomingContact
     singularName: 'incoming-contact';
     pluralName: 'incoming-contacts';
     displayName: 'IncomingContact';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1344,7 +1345,7 @@ export interface ApiIncomingContactIncomingContact
     name: Attribute.String;
     phone_number: Attribute.String;
     email: Attribute.String;
-    message: Attribute.String;
+    message: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

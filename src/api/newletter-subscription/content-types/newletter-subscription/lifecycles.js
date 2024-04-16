@@ -13,14 +13,11 @@ module.exports = {
             })
             await strapi.plugins["email"].services.email.send(
               {
-                to: "demenyador@gmail.com",
+                to: "info@villabauhaus-siofok.com",
                 from: "no-reply@villabauhaus-siofok.com",
                 subject: "Newsletter Form",
                 html: `<h2>New Newsletter Subscription</h2><br>
-                Name: ${result.name}<br>
-                Email Address: ${result.email}<br>
-                Phone Number: ${result.phone_number}<br>
-                ${result.message ? 'Message: ' + result.message : ''}`,
+                Email Address: ${result.email}<br>`
               },
               {
                 templateReferenceId: 1,
