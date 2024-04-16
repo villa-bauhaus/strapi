@@ -1399,7 +1399,8 @@ export interface ApiPrivacyPolicyPagePrivacyPolicyPage
   info: {
     singularName: 'privacy-policy-page';
     pluralName: 'privacy-policy-pages';
-    displayName: 'PrivacyPolicyPage';
+    displayName: 'ImpressumPage';
+    description: '';
   };
   options: {
     draftAndPublish: false;
