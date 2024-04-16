@@ -18,4 +18,27 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  email: {
+    config: {
+      provider: "nodemailer",
+      providerOptions: {
+        host: "cp1.rackhost.hu",
+        secure: false,
+        port: 587,
+        tls: {
+          ciphers: "SSLv3",
+          rejectUnauthorized: false,
+        },
+        requireTLS: true,
+        auth: {
+          user: 'no-reply@villabauhaus-siofok.com',
+          pass: 'omoxUgM,2H39',
+        },
+      },
+      settings: {
+        defaultFrom: "no-reply@villabauhaus-siofok.com",
+        defaultReplyTo: "info@villabauhaus-siofok.com",
+      },
+    },
+  },
 });
