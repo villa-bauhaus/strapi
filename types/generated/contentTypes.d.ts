@@ -944,6 +944,12 @@ export interface ApiApartmanApartman extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    iframe_src: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

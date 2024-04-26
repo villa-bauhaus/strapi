@@ -182,6 +182,14 @@
         }
       },
       "component": "shared.seo"
+    },
+    "iframe_src": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "text"
     }
   }
 }
