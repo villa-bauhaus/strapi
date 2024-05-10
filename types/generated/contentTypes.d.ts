@@ -1586,6 +1586,7 @@ export interface ApiWellnessElementWellnessElement
     singularName: 'wellness-element';
     pluralName: 'wellness-elements';
     displayName: 'WellnessElement';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1599,7 +1600,7 @@ export interface ApiWellnessElementWellnessElement
     image: Attribute.Media &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     title: Attribute.String &
@@ -1619,7 +1620,7 @@ export interface ApiWellnessElementWellnessElement
     priority: Attribute.Integer &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Attribute.DateTime;
