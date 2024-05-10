@@ -1579,6 +1579,73 @@ export interface ApiTermsAndConditionsPageTermsAndConditionsPage
   };
 }
 
+export interface ApiWellnessElementWellnessElement
+  extends Schema.CollectionType {
+  collectionName: 'wellness_elements';
+  info: {
+    singularName: 'wellness-element';
+    pluralName: 'wellness-elements';
+    displayName: 'WellnessElement';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    image: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    priority: Attribute.Integer &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::wellness-element.wellness-element',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::wellness-element.wellness-element',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::wellness-element.wellness-element',
+      'oneToMany',
+      'api::wellness-element.wellness-element'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1610,6 +1677,7 @@ declare module '@strapi/types' {
       'api::privacy-policy-page.privacy-policy-page': ApiPrivacyPolicyPagePrivacyPolicyPage;
       'api::review.review': ApiReviewReview;
       'api::terms-and-conditions-page.terms-and-conditions-page': ApiTermsAndConditionsPageTermsAndConditionsPage;
+      'api::wellness-element.wellness-element': ApiWellnessElementWellnessElement;
     }
   }
 }
