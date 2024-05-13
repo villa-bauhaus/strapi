@@ -76,14 +76,6 @@
           "localized": false
         }
       }
-    },
-    "priority": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "integer"
     }
   }
 }
