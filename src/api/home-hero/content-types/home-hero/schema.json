@@ -4,10 +4,11 @@
   "info": {
     "singularName": "home-hero",
     "pluralName": "home-heroes",
-    "displayName": "HomeHero"
+    "displayName": "HomeHero",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -64,11 +65,12 @@
       "type": "string"
     },
     "hero_images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": false

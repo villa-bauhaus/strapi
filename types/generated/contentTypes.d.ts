@@ -1312,9 +1312,10 @@ export interface ApiHomeHeroHomeHero extends Schema.SingleType {
     singularName: 'home-hero';
     pluralName: 'home-heroes';
     displayName: 'HomeHero';
+    description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1366,7 +1367,6 @@ export interface ApiHomeHeroHomeHero extends Schema.SingleType {
       }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::home-hero.home-hero',
       'oneToOne',
