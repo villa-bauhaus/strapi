@@ -1365,6 +1365,12 @@ export interface ApiHomeHeroHomeHero extends Schema.SingleType {
           localized: false;
         };
       }>;
+    priority: Attribute.Integer &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
