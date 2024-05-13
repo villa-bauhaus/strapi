@@ -1306,6 +1306,88 @@ export interface ApiFeatureFeature extends Schema.CollectionType {
   };
 }
 
+export interface ApiHomeHeroHomeHero extends Schema.SingleType {
+  collectionName: 'home_heroes';
+  info: {
+    singularName: 'home-hero';
+    pluralName: 'home-heroes';
+    displayName: 'HomeHero';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    lead: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    button1_text: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    button1_link: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    button2_text: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    button2_link: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero_images: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-hero.home-hero',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-hero.home-hero',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::home-hero.home-hero',
+      'oneToMany',
+      'api::home-hero.home-hero'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiHomePageGalleryHomePageGallery extends Schema.SingleType {
   collectionName: 'home_page_galleries';
   info: {
@@ -1672,6 +1754,7 @@ declare module '@strapi/types' {
       'api::cookie-policy-page.cookie-policy-page': ApiCookiePolicyPageCookiePolicyPage;
       'api::faq.faq': ApiFaqFaq;
       'api::feature.feature': ApiFeatureFeature;
+      'api::home-hero.home-hero': ApiHomeHeroHomeHero;
       'api::home-page-gallery.home-page-gallery': ApiHomePageGalleryHomePageGallery;
       'api::incoming-contact.incoming-contact': ApiIncomingContactIncomingContact;
       'api::newletter-subscription.newletter-subscription': ApiNewletterSubscriptionNewletterSubscription;
